@@ -6,4 +6,5 @@ Rails.application.routes.draw do
       resources :auths
     end
   end
+  match '*path' => 'options_request#preflight', via: :options
 end
