@@ -32,10 +32,10 @@ module SampleEcSiteApi
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
     # config.x.cors_allowed_origins = ENV.fetch('CORS_ALLOWED_ORIGINS', 'http://localhost:3333')
-    config.action_dispatch.default_headers = {
-  'Access-Control-Allow-Credentials' => 'true',
-  'Access-Control-Allow-Origin' => 'https://sample-ec-shop.firebaseapp.com/',
-  'Access-Control-Request-Method' => '*'
-}
+#     config.action_dispatch.default_headers = {
+#   'Access-Control-Allow-Credentials' => 'true',
+#   'Access-Control-Allow-Origin' => 'https://sample-ec-shop.firebaseapp.com/',
+#   'Access-Control-Request-Method' => '*'
+# }
   end
 end
