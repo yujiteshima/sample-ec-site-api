@@ -22,14 +22,14 @@ module Api
 
         if @mode == "all" 
           @count = Product.all.size
-        elsif @mode == "chocolate"
-          @count = Product.where(genre: "chocolate").size
-        elsif @mode == "fruits"
-          @count = Product.where(genre: "fruits").size
-        elsif @mode == "newItem"
-          @count = Product.where(genre: "new").size 
-        elsif @mode == "cheese"
-          @count = Product.where(genre: "cheese").size
+        elsif @mode == "nigiri"
+          @count = Product.where(genre: "nigiri").size
+        elsif @mode == "kaisen"
+          @count = Product.where(genre: "kaisen").size
+        elsif @mode == "siru"
+          @count = Product.where(genre: "siru").size 
+        elsif @mode == "sousaku"
+          @count = Product.where(genre: "sousaku").size
         elsif @mode == "select"
           @select = params[:select]
           @keyword = params[:keyword]
@@ -73,14 +73,14 @@ module Api
         @startId = (@current - 1) * @displayItem
         if @mode == "all"
         @products = Product.all.limit(@displayItem).offset(@startId)
-        elsif @mode == "chocolate"
-        @products = Product.where(genre: "chocolate").limit(@displayItem).offset(@startId)
-        elsif @mode == "fruits"
-        @products = Product.where(genre: "fruits").limit(@displayItem).offset(@startId)
-        elsif @mode == "cheese"
-        @products = Product.where(genre: "cheese").limit(@displayItem).offset(@startId)
-        elsif @mode == "newItem"
-        @products = Product.where(genre: "new").limit(@displayItem).offset(@startId)
+        elsif @mode == "nigiri"
+        @products = Product.where(genre: "nigiri").limit(@displayItem).offset(@startId)
+        elsif @mode == "kaisen"
+        @products = Product.where(genre: "kaisen").limit(@displayItem).offset(@startId)
+        elsif @mode == "siru"
+        @products = Product.where(genre: "siru").limit(@displayItem).offset(@startId)
+        elsif @mode == "sousaku"
+        @products = Product.where(genre: "sousaku").limit(@displayItem).offset(@startId)
         elsif @mode == "select"
           @select = params[:select]
           @keyword = params[:keyword]
