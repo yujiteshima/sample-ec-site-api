@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  match '*path' => 'options_request#preflight', via: :options
   namespace 'api' do
     namespace 'v1' do
       resources :searches
@@ -6,5 +7,5 @@ Rails.application.routes.draw do
       resources :auths
     end
   end
-  match '*path' => 'options_request#preflight', via: :options
+  
 end
