@@ -8,7 +8,8 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
     # origins Rails.application.config.x.cors_allowed_origins
-    origins 'http://localhost:3333'
+    # origins 'http://localhost:3333'
+    origins 'http://localhost:3333' , "https://sample-ec-shop.firebaseapp.com/"
 
     resource '*',
       headers: :any,
