@@ -10,7 +10,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
     # origins Rails.application.config.x.cors_allowed_origins
     # origins 'http://localhost:3333'
     #origins 'http://localhost:3333' , "http://sample-ec-shop.firebaseapp.com/", "https://sample-ec-shop.firebaseapp.com/search/",
-    origins "https://sample-ec-shop.firebaseapp.com/"
+    origins "*"
 
     resource '*',
       headers: :any,
