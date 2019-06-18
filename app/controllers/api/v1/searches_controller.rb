@@ -3,7 +3,8 @@ module Api
     class SearchesController < ApplicationController
       # GET /products
       def index
-        @products = Product.order("RANDOM()").limit(15)
+        @products = Product.all
+        #@products = Product.order("RANDOM()").limit(15)
         render json: @products
       end
 
