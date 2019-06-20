@@ -3,9 +3,9 @@ module Api
     class SearchesController < ApplicationController
       # GET /products
       def index
-        @wakeup = {"message" : "api wake up!"}
+        @products = Product.order("RANDOM()").limit(15)
         #@products = Product.order("RANDOM()").limit(15)
-        render json: @wakeup
+        render json: @products
       end
 
       def create
